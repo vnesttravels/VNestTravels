@@ -3,113 +3,167 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VNest Travels & Adventure • Explore Darjeeling & North Bengal</title>
+  <title>VNest Travels & Adventure — Darjeeling & North India Tours</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body{ background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
-    .hero-bg{ 
-      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-      url('https://images.unsplash.com/photo-1517821099603-109b0868f26f?auto=format&fit=crop&w=1800&q=80'); 
-      background-size: cover; background-position: center; 
-    }
     .card-shadow{ box-shadow:0 8px 28px rgba(0,0,0,0.45); }
     .fade-in{ animation:fadeIn .9s ease-out both; opacity:0; transform:translateY(12px); }
     @keyframes fadeIn{ to{ opacity:1; transform:translateY(0); } }
-    .gold-btn{ background: linear-gradient(to right, #FFD700, #FFA500); color:black; }
-    .gold-btn:hover{ background: linear-gradient(to right, #FFC107, #FF8C00); }
-    a.nav-link{ color:rgb(255,215,130); font-weight:500; }
-    a.nav-link:hover{ color:#FFD700; }
+    .gold-btn{ background:linear-gradient(to right,#FFD700,#FFC107); color:#0b0b0b; }
+    .gold-btn:hover{ background:linear-gradient(to right,#FFC107,#FFD700); }
   </style>
 </head>
-<body>
+<body class="antialiased">
 
+  <!-- NAV -->
   <header class="bg-black sticky top-0 z-50 border-b border-yellow-700">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
+      <a href="#home" class="flex items-center gap-3">
         <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
         <div class="text-yellow-300 font-bold">VNest Travels & Adventure</div>
       </a>
       <nav class="hidden md:flex gap-6">
-        <a href="index.html" class="nav-link font-semibold">Home</a>
-        <a href="vehicles.html" class="nav-link">Vehicles</a>
-        <a href="reviews.html" class="nav-link">Reviews</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#home" class="hover:text-yellow-400">Home</a>
+        <a href="#tours" class="hover:text-yellow-400">Tours</a>
+        <a href="#vehicles" class="hover:text-yellow-400">Vehicles</a>
+        <a href="#contact" class="hover:text-yellow-400">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-bg text-center text-yellow-300 py-28 fade-in">
-    <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-5xl font-bold mb-4">Explore Darjeeling & North Bengal</h1>
-      <p class="text-xl text-yellow-200 mb-6">Luxury local tours, scenic landscapes, tea gardens, and unforgettable adventures with VNest Travels & Adventure.</p>
-      <div class="flex justify-center gap-4">
-        <a href="contact.html" class="px-6 py-3 rounded-lg gold-btn font-semibold">Get a Quote</a>
-        <a href="vehicles.html" class="px-6 py-3 rounded-lg border border-yellow-700 hover:bg-yellow-800 font-semibold">See Vehicles</a>
-      </div>
+  <!-- HERO -->
+  <section id="home" class="relative py-24">
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
+    <img src="https://images.unsplash.com/photo-1505238680356-667803448bb6?auto=format&fit=crop&w=1800&q=80" alt="Darjeeling Hills" class="w-full h-96 object-cover brightness-75">
+    <div class="relative z-10 max-w-6xl mx-auto px-4 text-center text-yellow-300">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Explore Darjeeling & North India</h1>
+      <p class="text-lg md:text-xl mb-6">Local expertise, affordable tours, and unforgettable adventures.</p>
+      <a href="#tours" class="inline-block px-6 py-3 gold-btn rounded-lg font-semibold">See Tours</a>
     </div>
   </section>
 
-  <!-- Popular Tours -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-in">
+  <!-- TOURS -->
+  <section id="tours" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-in">
     <h2 class="text-3xl font-bold text-yellow-300 text-center mb-6">Popular Tours</h2>
-    <p class="text-yellow-200 text-center mb-10">Handpicked itineraries — customizable and affordable packages curated by VNest Travels & Adventure.</p>
+    <p class="text-yellow-200 text-center mb-10">Handpicked itineraries — customizable and unforgettable experiences.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
       <!-- Darjeeling -->
-      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow">
-        <img src="https://images.unsplash.com/photo-1545965580-9f029d42e6a0?auto=format&fit=crop&w=1200&q=80" alt="Darjeeling tour" class="w-full h-40 object-cover rounded-lg mb-3">
+      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+        <img src="https://www.setmytrip.in/wp-content/uploads/2024/12/23238179272_7fa38a5d6b_k.jpeg" alt="Darjeeling Classic tour" class="w-full h-40 object-cover rounded-lg mb-3">
         <h3 class="font-semibold text-yellow-300">Darjeeling Classic — 3 nights</h3>
-        <p class="text-yellow-200 text-sm mt-1">Tiger Hill sunrise, Batasia Loop, tea gardens, and toy train experience.</p>
+        <p class="text-yellow-200 text-sm mt-1">Tea gardens, Tiger Hill sunrise & charming mountain vibes.</p>
         <div class="mt-3 flex justify-between items-center">
-          <span class="font-bold">₹5,999 / person</span>
-          <a href="contact.html" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
+          <span class="font-bold">Starting From ₹3,999 / person</span>
+          <a href="#contact" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
         </div>
       </div>
 
       <!-- Sikkim -->
-      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Sikkim tour" class="w-full h-40 object-cover rounded-lg mb-3">
+      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+        <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2025/07/25100048/North-Sikkim-tourist-places-FI.jpg?tr=w-1200,q-60" alt="Sikkim Escape tour" class="w-full h-40 object-cover rounded-lg mb-3">
         <h3 class="font-semibold text-yellow-300">Sikkim Escape — 5 nights</h3>
-        <p class="text-yellow-200 text-sm mt-1">Gangtok, Tsomgo Lake, Nathula, and Pelling adventures.</p>
+        <p class="text-yellow-200 text-sm mt-1">Gangtok, North Sikkim lakes & scenic Himalayan views.</p>
         <div class="mt-3 flex justify-between items-center">
-          <span class="font-bold">₹12,499 / person</span>
-          <a href="contact.html" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
+          <span class="font-bold">Starting From ₹5,500 / person</span>
+          <a href="#contact" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
         </div>
       </div>
 
       <!-- Himachal -->
-      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow">
-        <img src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=1200&q=80" alt="Himachal tour" class="w-full h-40 object-cover rounded-lg mb-3">
+      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+        <img src="https://static.toiimg.com/photo/msid-93246451,width-96,height-65.cms" alt="Himachal Highlights tour" class="w-full h-40 object-cover rounded-lg mb-3">
         <h3 class="font-semibold text-yellow-300">Himachal Highlights — 6 nights</h3>
-        <p class="text-yellow-200 text-sm mt-1">Shimla, Manali, scenic drives, and adventure sports.</p>
+        <p class="text-yellow-200 text-sm mt-1">Shimla, Manali & alpine landscapes.</p>
         <div class="mt-3 flex justify-between items-center">
-          <span class="font-bold">₹15,999 / person</span>
-          <a href="contact.html" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
+          <span class="font-bold">Starting From ₹7,500 / person</span>
+          <a href="#contact" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
         </div>
       </div>
 
       <!-- Uttarakhand -->
-      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow">
-        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Uttarakhand tour" class="w-full h-40 object-cover rounded-lg mb-3">
+      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+        <img src="https://www.daiwikhotels.com/wp-content/uploads/2024/07/KEDARNATH-2-1-1.jpg" alt="Uttarakhand Escape tour" class="w-full h-40 object-cover rounded-lg mb-3">
         <h3 class="font-semibold text-yellow-300">Uttarakhand Escape — 5 nights</h3>
-        <p class="text-yellow-200 text-sm mt-1">Rishikesh, Nainital, valley views, and riverside adventures.</p>
+        <p class="text-yellow-200 text-sm mt-1">Spiritual trails, hill stations & river valley views.</p>
         <div class="mt-3 flex justify-between items-center">
-          <span class="font-bold">₹11,499 / person</span>
-          <a href="contact.html" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
+          <span class="font-bold">Starting From ₹5,999 / person</span>
+          <a href="#contact" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- VEHICLES -->
+  <section id="vehicles" class="bg-black/70 border-t border-yellow-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h3 class="text-2xl font-bold text-yellow-300 mb-6">Reliable Vehicles in North Bengal</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-4 rounded-xl bg-black/50 card-shadow">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/2018_Suzuki_Karimun_Wagon_R_GL_%28front%29.jpg" alt="4-Seater" class="w-full h-36 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-yellow-300">4-Seater</h4>
+          <p class="text-yellow-200 text-sm">Perfect for couples and small families.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-black/50 card-shadow">
+          <img src="https://imgd-ct.aeplcdn.com/664x415/ec/BD/F0/10752/img/l/Tata-Sumo-Left-Front-Three-Quarter-18297.jpg?v=201711021421&q=80" alt="8-Seater" class="w-full h-36 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-yellow-300">8-Seater</h4>
+          <p class="text-yellow-200 text-sm">Ideal for groups and B2B transfers.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-black/50 card-shadow">
+          <img src="https://www.team-bhp.com/sites/default/files/pictures2023/CoorgMay2324.jpg" alt="B2B" class="w-full h-36 object-cover rounded-lg mb-3">
+          <h4 class="font-semibold text-yellow-300">B2B Partnerships</h4>
+          <p class="text-yellow-200 text-sm">Trusted by many tour operators for reliable transfers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-in">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-black/60 p-6 rounded-2xl border border-yellow-700 card-shadow">
+        <h3 class="text-xl font-bold text-yellow-300">Get a Quote / Book</h3>
+        <p class="text-yellow-200 mt-2">Tell us your dates & preferences and we'll send a transparent quote.</p>
+        <form id="contact-form" class="mt-4 space-y-4">
+          <input name="name" required placeholder="Your Name" class="w-full px-3 py-2 rounded bg-black border border-yellow-700 text-yellow-100">
+          <input name="email" type="email" required placeholder="Email" class="w-full px-3 py-2 rounded bg-black border border-yellow-700 text-yellow-100">
+          <input name="phone" required placeholder="Phone" class="w-full px-3 py-2 rounded bg-black border border-yellow-700 text-yellow-100">
+          <textarea name="message" rows="4" placeholder="Trip Details" class="w-full px-3 py-2 rounded bg-black border border-yellow-700 text-yellow-100"></textarea>
+          <button type="submit" class="px-4 py-2 gold-btn rounded-lg font-semibold">Send Message</button>
+          <div id="form-status" class="text-yellow-200 mt-2 text-sm"></div>
+        </form>
+      </div>
+      <div class="bg-black/60 p-6 rounded-2xl border border-yellow-700 card-shadow">
+        <h3 class="text-xl font-semibold text-yellow-300">Our Location</h3>
+        <p class="text-yellow-200 mt-2">VNest Travels & Adventure<br>Darjeeling, West Bengal, India</p>
+        <p class="text-yellow-200 mt-2">Email: vnest5825@gmail.com<br>Phone: +91 8250193981</p>
+        <div class="mt-6">
+          <iframe class="w-full h-48 rounded-md border border-yellow-700" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.764305704508!2d88.273212!3d27.0308036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e42ffcddaad8c5%3A0x91fceff9450aac94!2sVNest+Travels+%26+Adventure!5e0!3m2!1sen!2sin!4v1702345678901!5m2!1sen!2sin" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="bg-black border-t border-yellow-700 py-6 text-center text-yellow-300">
     <div class="max-w-6xl mx-auto px-4">© <span id="year"></span> VNest Travels & Adventure</div>
   </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <!-- WhatsApp Floating -->
+  <a href="https://wa.me/918250193981" target="_blank" class="fixed bottom-5 right-5 z-50">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-16 h-16">
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contact-form')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      status.textContent = 'Sending...';
+      setTimeout(()=>{ status.textContent = 'Thanks — we will contact you soon!'; this.reset(); }, 800);
+    });
+  </script>
 
 </body>
 </html>
