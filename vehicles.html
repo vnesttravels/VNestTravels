@@ -1,79 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Vehicles • VNest Travels & Adventure</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
-    .card-shadow { box-shadow:0 10px 25px rgba(0,0,0,0.5); transition: all 0.3s ease; }
-    .card-shadow:hover { transform: scale(1.05); box-shadow:0 15px 35px rgba(255,215,130,0.4); }
-    .gold-btn { background:linear-gradient(90deg,#FFD700,#FFC107); color:#0b0b0b; transition: 0.3s; }
-    .gold-btn:hover { background:linear-gradient(90deg,#FFC107,#FFD700); transform:scale(1.05); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vehicles • VNest Travels & Adventure</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body { background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
+.card-shadow { box-shadow:0 10px 30px rgba(0,0,0,0.6); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-shadow:hover { transform:scale(1.05); box-shadow:0 15px 40px rgba(255,215,130,0.4); }
+.fade-in { animation:fadeIn 1s ease forwards; opacity:0; }
+@keyframes fadeIn { to { opacity:1; } }
+.gold-btn { background:linear-gradient(90deg,#FFD700,#FFC107); color:#0b0b0b; transition: 0.3s; }
+.gold-btn:hover { background:linear-gradient(90deg,#FFC107,#FFD700); transform:scale(1.05); }
+</style>
 </head>
-<body>
+<body class="antialiased">
 
-  <!-- NAV -->
-  <header class="bg-black sticky top-0 z-50 border-b border-yellow-700">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
-        <div class="font-bold text-yellow-300">VNest Travels & Adventure</div>
-      </a>
-      <nav class="hidden md:flex gap-6">
-        <a href="index.html" class="hover:text-yellow-400">Home</a>
-        <a href="vehicles.html" class="hover:text-yellow-400 font-semibold">Vehicles</a>
-        <a href="reviews.html" class="hover:text-yellow-400">Reviews</a>
-        <a href="contact.html" class="gold-btn px-4 py-2 rounded-lg">Contact</a>
-      </nav>
+<!-- NAV -->
+<header class="bg-black sticky top-0 z-50 border-b border-yellow-700">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
+      <div class="text-yellow-300 font-bold">VNest Travels & Adventure</div>
+    </a>
+    <nav class="hidden md:flex gap-6">
+      <a href="index.html" class="hover:text-yellow-400">Home</a>
+      <a href="vehicles.html" class="hover:text-yellow-400 font-semibold">Vehicles</a>
+      <a href="reviews.html" class="hover:text-yellow-400">Reviews</a>
+      <a href="contact.html" class="gold-btn px-4 py-2 rounded-lg">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <section class="text-center fade-in">
+    <h1 class="text-3xl font-bold text-yellow-300">Reliable Vehicles in North Bengal</h1>
+    <p class="text-yellow-200 mt-2">Safe, comfortable 4-seater and 8-seater cars for day tours, multi-day transfers, and airport pickups.</p>
+    <p class="text-yellow-200 font-semibold mt-1">Starting From ₹3,000 / day</p>
+  </section>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+    <!-- 4-Seater -->
+    <div class="bg-black/60 p-4 rounded-2xl card-shadow fade-in">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/2018_Suzuki_Karimun_Wagon_R_GL_%28front%29.jpg" class="w-full h-36 object-cover rounded-lg mb-3" alt="4-Seater">
+      <h4 class="text-yellow-300 font-semibold">4-Seater</h4>
+      <p class="text-yellow-200 text-sm">Perfect for couples and small families. Clean, experienced drivers.</p>
     </div>
-  </header>
 
-  <!-- VEHICLES -->
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-    <div class="mb-8 text-center">
-      <h2 class="text-3xl font-bold text-yellow-300">Reliable Vehicles in North Bengal</h2>
-      <p class="mt-2 text-yellow-200">Safe, comfortable 4-seater and 8-seater cars for day tours, multi-day transfers, and airport pickups.</p>
-      <p class="mt-1 text-yellow-200 font-semibold">Starting at ₹3,000 / day</p>
+    <!-- 8-Seater -->
+    <div class="bg-black/60 p-4 rounded-2xl card-shadow fade-in">
+      <img src="https://imgd-ct.aeplcdn.com/664x415/ec/BD/F0/10752/img/l/Tata-Sumo-Left-Front-Three-Quarter-18297.jpg?v=201711021421&q=80" class="w-full h-36 object-cover rounded-lg mb-3" alt="8-Seater">
+      <h4 class="text-yellow-300 font-semibold">8-Seater</h4>
+      <p class="text-yellow-200 text-sm">Ideal for groups and B2B transfers. Comfortable seating and luggage space.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- 4-Seater -->
-      <div class="p-4 rounded-2xl bg-black/60 card-shadow">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/2018_Suzuki_Karimun_Wagon_R_GL_%28front%29.jpg" alt="Car 4 seater" class="w-full h-36 object-cover rounded-lg mb-3">
-        <h4 class="font-semibold text-yellow-300">4-Seater</h4>
-        <p class="text-yellow-200 text-sm">Perfect for couples and small families. Clean, experienced drivers.</p>
-        <p class="mt-2 text-yellow-200 font-semibold">Starting From ₹3,000 / day</p>
-      </div>
-
-      <!-- 8-Seater -->
-      <div class="p-4 rounded-2xl bg-black/60 card-shadow">
-        <img src="https://imgd-ct.aeplcdn.com/664x415/ec/BD/F0/10752/img/l/Tata-Sumo-Left-Front-Three-Quarter-18297.jpg?v=201711021421&q=80" alt="Car 8 seater" class="w-full h-36 object-cover rounded-lg mb-3">
-        <h4 class="font-semibold text-yellow-300">8-Seater</h4>
-        <p class="text-yellow-200 text-sm">Ideal for groups and B2B transfers. Comfortable seating and luggage space.</p>
-        <p class="mt-2 text-yellow-200 font-semibold">Starting From ₹3,000 / day</p>
-      </div>
-
-      <!-- B2B Partnership -->
-      <div class="p-4 rounded-2xl bg-black/60 card-shadow">
-        <img src="https://www.team-bhp.com/sites/default/files/pictures2023/CoorgMay2324.jpg" alt="B2B partnership" class="w-full h-36 object-cover rounded-lg mb-3">
-        <h4 class="font-semibold text-yellow-300">B2B Partnerships</h4>
-        <p class="text-yellow-200 text-sm">Trusted by many tour operators for reliable transfers and white-label services.</p>
-        <p class="mt-2 text-yellow-200 font-semibold">Starting From ₹3,000 / day</p>
-      </div>
+    <!-- B2B -->
+    <div class="bg-black/60 p-4 rounded-2xl card-shadow fade-in">
+      <img src="https://www.team-bhp.com/sites/default/files/pictures2023/CoorgMay2324.jpg" class="w-full h-36 object-cover rounded-lg mb-3" alt="B2B Partnership">
+      <h4 class="text-yellow-300 font-semibold">B2B Partnerships</h4>
+      <p class="text-yellow-200 text-sm">Trusted by many tour operators for reliable transfers and white-label services.</p>
     </div>
-  </main>
+  </div>
+</main>
 
-  <!-- FOOTER -->
-  <footer class="bg-black border-t border-yellow-700 py-6 text-center text-yellow-300">
-    <div class="max-w-6xl mx-auto px-4">© <span id="year-vehicles"></span> VNest Travels & Adventure</div>
-  </footer>
+<!-- 3D WhatsApp -->
+<a href="https://wa.me/918250193981" target="_blank" class="fixed right-6 bottom-6 z-50 w-16 h-16 rounded-full shadow-2xl bg-green-500 hover:scale-110 transition-transform flex items-center justify-center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-8 h-8" alt="WhatsApp">
+</a>
 
-  <script>
-    document.getElementById('year-vehicles').textContent = new Date().getFullYear();
-  </script>
+<footer class="bg-black border-t border-yellow-700 py-6 text-center text-yellow-300">
+  <div class="max-w-6xl mx-auto px-4">© <span id="year-vehicles"></span> VNest Travels & Adventure</div>
+</footer>
 
+<script>
+document.getElementById('year-vehicles').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
