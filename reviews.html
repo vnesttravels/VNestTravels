@@ -1,85 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Reviews • North Bengal Trips</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body{ background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
-    .card-shadow{ box-shadow:0 8px 28px rgba(0,0,0,0.45); }
-    .fade-in{ animation:fadeIn .9s ease-out both; opacity:0; transform:translateY(12px); }
-    @keyframes fadeIn{ to{ opacity:1; transform:translateY(0); } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reviews • VNest Travels & Adventure</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body { background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
+.card-shadow { box-shadow:0 10px 30px rgba(0,0,0,0.6); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-shadow:hover { transform:scale(1.05); box-shadow:0 15px 40px rgba(255,215,130,0.4); }
+.fade-in { animation:fadeIn 1s ease forwards; opacity:0; }
+@keyframes fadeIn { to { opacity:1; } }
+</style>
 </head>
-<body>
+<body class="antialiased">
 
-  <header class="bg-black sticky top-0 z-50 border-b border-gold-700">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
-        <div class="text-gold-300 font-bold">North Bengal Trips</div>
-      </a>
-      <nav class="hidden md:flex gap-6">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="vehicles.html" class="nav-link">Vehicles</a>
-        <a href="reviews.html" class="nav-link font-semibold">Reviews</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
+<header class="bg-black sticky top-0 z-50 border-b border-yellow-700">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
+      <div class="text-yellow-300 font-bold">VNest Travels & Adventure</div>
+    </a>
+    <nav class="hidden md:flex gap-6">
+      <a href="index.html" class="hover:text-yellow-400">Home</a>
+      <a href="vehicles.html" class="hover:text-yellow-400">Vehicles</a>
+      <a href="reviews.html" class="hover:text-yellow-400 font-semibold">Reviews</a>
+      <a href="contact.html" class="gold-btn px-4 py-2 rounded-lg">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <section class="text-center fade-in">
+    <h1 class="text-3xl font-bold text-yellow-300">Traveller Reviews</h1>
+    <p class="text-yellow-200 mt-2">Hear what our happy clients say about their Himalayas adventures.</p>
+  </section>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+    <div class="bg-black/60 p-6 rounded-2xl card-shadow fade-in">
+      <p class="text-yellow-200">“Local guides, great vehicles, and amazing planning. Highly recommended!”</p>
+      <footer class="mt-3 text-sm text-yellow-400 font-semibold">— Priya, Mumbai</footer>
     </div>
-  </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <section class="text-center fade-in">
-      <h1 class="text-4xl font-bold text-gold-300">Customer Reviews</h1>
-      <p class="text-gold-200 mt-2 max-w-2xl mx-auto">Real feedback from travellers who experienced our premium services.</p>
-    </section>
+    <div class="bg-black/60 p-6 rounded-2xl card-shadow fade-in">
+      <p class="text-yellow-200">“Our group of 8 had the best experience. Timely drivers and offbeat suggestions.”</p>
+      <footer class="mt-3 text-sm text-yellow-400 font-semibold">— Rohit, Delhi</footer>
+    </div>
 
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-      <!-- review card -->
-      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
-        <p class="italic text-gold-200">“The driver was punctual and very helpful — made our Darjeeling sunrise trip unforgettable.”</p>
-        <h4 class="mt-4 text-gold-300 font-semibold">— Priya & Family</h4>
-        <p class="text-yellow-400">★★★★★</p>
-      </article>
+    <div class="bg-black/60 p-6 rounded-2xl card-shadow fade-in">
+      <p class="text-yellow-200">“Excellent B2B service — we now work with VNest regularly for transfers across North Bengal.”</p>
+      <footer class="mt-3 text-sm text-yellow-400 font-semibold">— Himalayan Getaways</footer>
+    </div>
+  </div>
+</main>
 
-      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
-        <p class="italic text-gold-200">“Excellent vehicles and service. Perfect for a comfortable group journey.”</p>
-        <h4 class="mt-4 text-gold-300 font-semibold">— Rohan Sharma</h4>
-        <p class="text-yellow-400">★★★★★</p>
-      </article>
+<!-- 3D WhatsApp -->
+<a href="https://wa.me/918250193981" target="_blank" class="fixed right-6 bottom-6 z-50 w-16 h-16 rounded-full shadow-2xl bg-green-500 hover:scale-110 transition-transform flex items-center justify-center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-8 h-8" alt="WhatsApp">
+</a>
 
-      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
-        <p class="italic text-gold-200">“Smooth airport transfer — clean car and courteous driver.”</p>
-        <h4 class="mt-4 text-gold-300 font-semibold">— Sneha D.</h4>
-        <p class="text-yellow-400">★★★★★</p>
-      </article>
+<footer class="bg-black border-t border-yellow-700 py-6 text-center text-yellow-300">
+  <div class="max-w-6xl mx-auto px-4">© <span id="year-reviews"></span> VNest Travels & Adventure</div>
+</footer>
 
-      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
-        <p class="italic text-gold-200">“Amazing local knowledge from the driver — highly recommended!”</p>
-        <h4 class="mt-4 text-gold-300 font-semibold">— Arvind & Meera</h4>
-        <p class="text-yellow-400">★★★★★</p>
-      </article>
-
-      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
-        <p class="italic text-gold-200">“Professional service and timely communication. Will book again.”</p>
-        <h4 class="mt-4 text-gold-300 font-semibold">— Tumpa Sen</h4>
-        <p class="text-yellow-400">★★★★★</p>
-      </article>
-
-      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
-        <p class="italic text-gold-200">“Kids loved the ride — safe driving and good suggestions for stops.”</p>
-        <h4 class="mt-4 text-gold-300 font-semibold">— The Roy Family</h4>
-        <p class="text-yellow-400">★★★★★</p>
-      </article>
-    </section>
-
-  </main>
-
-  <footer class="bg-black border-t border-gold-700 py-6 text-center text-gold-300">
-    <div class="max-w-6xl mx-auto px-4">© <span id="year3"></span> North Bengal Trips</div>
-  </footer>
-
-<script> document.getElementById('year3').textContent = new Date().getFullYear(); </script>
+<script>
+document.getElementById('year-reviews').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
