@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact • North Bengal Trips</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body{ background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
+    .card-shadow{ box-shadow:0 8px 28px rgba(0,0,0,0.45); }
+    .fade-in{ animation:fadeIn .9s ease-out both; opacity:0; transform:translateY(12px); }
+    @keyframes fadeIn{ to{ opacity:1; transform:translateY(0); } }
+    .gold-btn{ background: linear-gradient(to right, #FFD700, #FFA500); color:black; }
+    .gold-btn:hover{ background: linear-gradient(to right, #FFC107, #FF8C00); }
+    a.nav-link{ color:rgb(255,215,130); font-weight:500; }
+    a.nav-link:hover{ color:#FFD700; }
+  </style>
+</head>
+<body>
+
+  <header class="bg-black sticky top-0 z-50 border-b border-yellow-700">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
+        <div class="text-yellow-300 font-bold">North Bengal Trips</div>
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link font-semibold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section class="text-center fade-in">
+      <h1 class="text-3xl font-bold text-yellow-300">Get a Quote / Book</h1>
+      <p class="text-yellow-200 mt-2">Tell us your dates & preferences and we'll send a transparent quote.</p>
+    </section>
+
+    <section class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Form -->
+      <div class="bg-black/60 p-6 rounded-2xl border border-yellow-700 card-shadow fade-in">
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label class="text-sm text-yellow-200">Name</label>
+            <input name="name" required class="w-full mt-1 px-3 py-2 rounded bg-black border border-yellow-700 text-yellow-100" placeholder="Your name">
+          </div>
+          <div>
+            <label class="text-sm text-yellow-200">Email</label>
+            <input name="email" type="email" required class="w-full mt-1 px-3 py-2 rounded bg-black border border-yellow-700 text-yellow-100" placeholder="you@example.com">
+          </div>
+          <div>
+            <label class="text-sm text-yellow-200">Phone</label>
+            <input name="phone" required class="w-full mt-1 px-3 py-2 rounded bg-black border border-yellow-700 text-yellow-100" placeholder="+91 8250193981">
+          </div>
+          <div>
+            <label class="text-sm text-yellow-200">Message / Trip details</label>
+            <textarea name="message" rows="4" class="w-full mt-1 px-3 py-2 rounded bg-black border border-yellow-700 text-yellow-100" placeholder="Dates, number of people, places you want to visit..."></textarea>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button type="submit" class="px-4 py-2 rounded-lg gold-btn font-semibold">Send message</button>
+            <div id="form-status" class="text-sm text-yellow-200"></div>
+          </div>
+        </form>
+        <p class="mt-4 text-sm text-yellow-200">Prefer WhatsApp? Message us at <strong>+91 8250193981</strong></p>
+      </div>
+
+      <!-- Office Info + Map -->
+      <div class="bg-black/60 p-6 rounded-2xl border border-yellow-700 card-shadow fade-in">
+        <h3 class="text-xl font-semibold text-yellow-300">Our Office</h3>
+        <p class="text-yellow-200 mt-2">VNest Travels & Adventure, Darjeeling, West Bengal, India</p>
+        <p class="text-yellow-200 mt-2">Email: <strong>vnest5825@gmail.com</strong><br>Phone: <strong>+91 8250193981</strong></p>
+
+        <div class="mt-6">
+          <h5 class="text-sm font-semibold text-yellow-300">Opening Hours</h5>
+          <p class="text-yellow-200">Mon–Sun: 8:00 AM – 8:00 PM</p>
+        </div>
+
+        <div class="mt-6">
+          <!-- Google Maps embed for VNest Travels -->
+          <iframe class="w-full h-48 rounded-md border border-yellow-700"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d353.4353065161596!2d88.273212!3d27.0308036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e42ffcddaad8c5%3A0x91fceff9450aac94!2sVNest+Travels+%26+Adventure!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black border-t border-yellow-700 py-6 text-center text-yellow-300">
+    <div class="max-w-6xl mx-auto px-4">© <span id="year4"></span> North Bengal Trips</div>
+  </footer>
+
+<script>
+  // fake form submission
+  document.getElementById('contact-form')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    const status = document.getElementById('form-status');
+    status.textContent = 'Sending...';
+    setTimeout(()=>{ status.textContent = 'Thanks — we will contact you soon!'; this.reset(); }, 800);
+  });
+  document.getElementById('year4').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
