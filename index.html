@@ -3,124 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>North Bengal Trips • Luxury</title>
-  <meta name="description" content="Premium North Bengal transfers, tours and B2B services — luxury black & gold theme." />
+  <title>VNest Travels & Adventure • Explore Darjeeling & North Bengal</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{
-      --gold-50: #fff7ec;
-      --gold-100: #fbe9c6;
-      --gold-300: #ffd28a;
-      --gold-400: #ffc65a;
-      --gold-500: #ffb300;
-      --gold-700: #a86f00;
+    body{ background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
+    .hero-bg{ 
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+      url('https://images.unsplash.com/photo-1517821099603-109b0868f26f?auto=format&fit=crop&w=1800&q=80'); 
+      background-size: cover; background-position: center; 
     }
-    body { background: #0b0b0b; color: rgb(255,215,130); font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-    .card-shadow{ box-shadow: 0 8px 28px rgba(0,0,0,0.45); }
-    .fade-in { animation: fadeIn .9s ease-out both; opacity: 0; transform: translateY(12px); }
-    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
-    a.nav-link { color: rgba(255,215,130,0.85); text-decoration: none; }
-    a.nav-link:hover { color: var(--gold-50); }
-    .gold-btn { background: linear-gradient(90deg,var(--gold-500),#ffd36a); color: #071017; }
+    .card-shadow{ box-shadow:0 8px 28px rgba(0,0,0,0.45); }
+    .fade-in{ animation:fadeIn .9s ease-out both; opacity:0; transform:translateY(12px); }
+    @keyframes fadeIn{ to{ opacity:1; transform:translateY(0); } }
+    .gold-btn{ background: linear-gradient(to right, #FFD700, #FFA500); color:black; }
+    .gold-btn:hover{ background: linear-gradient(to right, #FFC107, #FF8C00); }
+    a.nav-link{ color:rgb(255,215,130); font-weight:500; }
+    a.nav-link:hover{ color:#FFD700; }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-gold-700">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="index.html" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
-          <div>
-            <div class="font-bold text-gold-400">North Bengal Trips</div>
-            <div class="text-xs text-gold-300 -mt-0.5">Travel Luxury • Travel Local</div>
-          </div>
-        </a>
-
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="vehicles.html" class="nav-link">Vehicles</a>
-          <a href="reviews.html" class="nav-link">Reviews</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-          <a href="contact.html" class="px-4 py-2 rounded-lg gold-btn text-sm font-semibold">Book Now</a>
-        </nav>
-
-        <div class="md:hidden">
-          <button id="nav-toggle" aria-label="Open menu" class="p-2 rounded-md focus:outline-none">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile -->
-      <div id="mobile-menu" class="md:hidden hidden">
-        <div class="px-4 pb-6 pt-4 space-y-3">
-          <a href="index.html" class="block nav-link">Home</a>
-          <a href="vehicles.html" class="block nav-link">Vehicles</a>
-          <a href="reviews.html" class="block nav-link">Reviews</a>
-          <a href="contact.html" class="block nav-link">Contact</a>
-        </div>
-      </div>
+  <header class="bg-black sticky top-0 z-50 border-b border-yellow-700">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
+        <div class="text-yellow-300 font-bold">VNest Travels & Adventure</div>
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a href="index.html" class="nav-link font-semibold">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1599661046284-8bdbab931828?auto=format&fit=crop&w=1350&q=80');">
-    <div class="bg-black/60 p-8 rounded-2xl text-center fade-in max-w-3xl">
-      <h1 class="text-4xl md:text-5xl font-extrabold text-gold-400 mb-3">Explore North Bengal in Luxury</h1>
-      <p class="text-gold-200 mb-6">Premium transfers • Curated tours • Professional chauffeurs</p>
-      <div class="flex justify-center gap-3">
-        <a href="vehicles.html" class="px-6 py-3 rounded-lg gold-btn font-semibold">View Vehicles</a>
-        <a href="reviews.html" class="px-6 py-3 rounded-lg border border-gold-700 text-gold-300">Read Reviews</a>
+  <!-- Hero Section -->
+  <section class="hero-bg text-center text-yellow-300 py-28 fade-in">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-5xl font-bold mb-4">Explore Darjeeling & North Bengal</h1>
+      <p class="text-xl text-yellow-200 mb-6">Luxury local tours, scenic landscapes, tea gardens, and unforgettable adventures with VNest Travels & Adventure.</p>
+      <div class="flex justify-center gap-4">
+        <a href="contact.html" class="px-6 py-3 rounded-lg gold-btn font-semibold">Get a Quote</a>
+        <a href="vehicles.html" class="px-6 py-3 rounded-lg border border-yellow-700 hover:bg-yellow-800 font-semibold">See Vehicles</a>
       </div>
     </div>
   </section>
 
-  <!-- Vehicles preview -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-    <div class="mb-8 text-center fade-in">
-      <h2 class="text-3xl font-bold text-gold-300">Featured Vehicles</h2>
-      <p class="mt-2 text-gold-200">Premium fleet for comfortable journeys across Darjeeling, Sikkim & North Bengal.</p>
-    </div>
+  <!-- Popular Tours -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-in">
+    <h2 class="text-3xl font-bold text-yellow-300 text-center mb-6">Popular Tours</h2>
+    <p class="text-yellow-200 text-center mb-10">Handpicked itineraries — customizable and affordable packages curated by VNest Travels & Adventure.</p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-black/60 p-6 rounded-2xl card-shadow border border-gold-700 fade-in">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/2018_Suzuki_Karimun_Wagon_R_GL_%28front%29.jpg" alt="4 seater" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="font-semibold text-gold-300">4-Seater — Premium</h3>
-        <p class="text-sm text-gold-200 mt-2">Comfort for couples & small families. Professional drivers.</p>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- Darjeeling -->
+      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow">
+        <img src="https://images.unsplash.com/photo-1545965580-9f029d42e6a0?auto=format&fit=crop&w=1200&q=80" alt="Darjeeling tour" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold text-yellow-300">Darjeeling Classic — 3 nights</h3>
+        <p class="text-yellow-200 text-sm mt-1">Tiger Hill sunrise, Batasia Loop, tea gardens, and toy train experience.</p>
+        <div class="mt-3 flex justify-between items-center">
+          <span class="font-bold">₹5,999 / person</span>
+          <a href="contact.html" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
+        </div>
       </div>
 
-      <div class="bg-black/60 p-6 rounded-2xl card-shadow border border-gold-700 fade-in">
-        <img src="https://imgd-ct.aeplcdn.com/664x415/ec/BD/F0/10752/img/l/Tata-Sumo-Left-Front-Three-Quarter-18297.jpg?v=201711021421&q=80" alt="8 seater" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="font-semibold text-gold-300">8-Seater — Executive</h3>
-        <p class="text-sm text-gold-200 mt-2">Spacious seating for larger groups and corporate transfers.</p>
+      <!-- Sikkim -->
+      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Sikkim tour" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold text-yellow-300">Sikkim Escape — 5 nights</h3>
+        <p class="text-yellow-200 text-sm mt-1">Gangtok, Tsomgo Lake, Nathula, and Pelling adventures.</p>
+        <div class="mt-3 flex justify-between items-center">
+          <span class="font-bold">₹12,499 / person</span>
+          <a href="contact.html" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
+        </div>
       </div>
 
-      <div class="bg-black/60 p-6 rounded-2xl card-shadow border border-gold-700 fade-in">
-        <img src="https://www.team-bhp.com/sites/default/files/pictures2023/CoorgMay2324.jpg" alt="b2b" class="w-full h-48 object-cover rounded-lg mb-4">
-        <h3 class="font-semibold text-gold-300">B2B Partnerships</h3>
-        <p class="text-sm text-gold-200 mt-2">White-label transfers & reliable service for travel partners.</p>
+      <!-- Himachal -->
+      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow">
+        <img src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=1200&q=80" alt="Himachal tour" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold text-yellow-300">Himachal Highlights — 6 nights</h3>
+        <p class="text-yellow-200 text-sm mt-1">Shimla, Manali, scenic drives, and adventure sports.</p>
+        <div class="mt-3 flex justify-between items-center">
+          <span class="font-bold">₹15,999 / person</span>
+          <a href="contact.html" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
+        </div>
       </div>
-    </div>
 
-    <div class="text-center mt-8">
-      <a href="vehicles.html" class="px-6 py-3 rounded-lg gold-btn font-semibold">See all vehicles</a>
+      <!-- Uttarakhand -->
+      <div class="bg-black/60 p-4 rounded-2xl border border-yellow-700 card-shadow">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Uttarakhand tour" class="w-full h-40 object-cover rounded-lg mb-3">
+        <h3 class="font-semibold text-yellow-300">Uttarakhand Escape — 5 nights</h3>
+        <p class="text-yellow-200 text-sm mt-1">Rishikesh, Nainital, valley views, and riverside adventures.</p>
+        <div class="mt-3 flex justify-between items-center">
+          <span class="font-bold">₹11,499 / person</span>
+          <a href="contact.html" class="px-3 py-1 rounded-lg gold-btn font-semibold text-sm">Book</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black border-t border-gold-700 py-6">
-    <div class="max-w-6xl mx-auto px-4 text-center text-gold-300">
-      <p>© <span id="year"></span> North Bengal Trips • Luxury Edition</p>
-    </div>
+  <footer class="bg-black border-t border-yellow-700 py-6 text-center text-yellow-300">
+    <div class="max-w-6xl mx-auto px-4">© <span id="year"></span> VNest Travels & Adventure</div>
   </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  const navToggle = document.getElementById('nav-toggle');
-  const mobile = document.getElementById('mobile-menu');
-  navToggle?.addEventListener('click', ()=> mobile.classList.toggle('hidden'));
 </script>
+
 </body>
 </html>
