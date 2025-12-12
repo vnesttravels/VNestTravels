@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vehicles • North Bengal Trips</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{ --gold-500:#ffb300; --gold-300:#ffd28a; }
+    body{ background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
+    .card-shadow{ box-shadow:0 8px 28px rgba(0,0,0,0.45); }
+    .fade-in{ animation:fadeIn .9s ease-out both; opacity:0; transform:translateY(12px); }
+    @keyframes fadeIn{ to{ opacity:1; transform:translateY(0); } }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-black sticky top-0 z-50 border-b border-gold-700">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
+        <div>
+          <div class="font-bold text-gold-400">North Bengal Trips</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link font-semibold">Vehicles</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page intro -->
+  <section class="py-14 text-center fade-in">
+    <h1 class="text-3xl font-bold text-gold-300">Our Luxury Fleet</h1>
+    <p class="text-gold-200 mt-2 max-w-2xl mx-auto">Handpicked vehicles maintained to the highest standards to deliver a comfortable and premium travel experience.</p>
+  </section>
+
+  <!-- Vehicles grid -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Vehicle card repeated -->
+      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/2018_Suzuki_Karimun_Wagon_R_GL_%28front%29.jpg" alt="4 seater" class="w-full h-56 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gold-300">Premium 4-Seater</h3>
+        <p class="text-gold-200 mt-2">Best for couples and families — luggage friendly, comfortable interiors.</p>
+        <div class="mt-4 flex justify-between items-center">
+          <div class="text-gold-300 font-bold">₹1,200 / day</div>
+          <a href="contact.html" class="px-4 py-2 rounded-lg gold-btn font-semibold">Book</a>
+        </div>
+      </article>
+
+      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
+        <img src="https://imgd-ct.aeplcdn.com/664x415/ec/BD/F0/10752/img/l/Tata-Sumo-Left-Front-Three-Quarter-18297.jpg?v=201711021421&q=80" alt="8 seater" class="w-full h-56 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gold-300">Executive 8-Seater</h3>
+        <p class="text-gold-200 mt-2">Spacious, ideal for groups and corporate transfers with luggage space.</p>
+        <div class="mt-4 flex justify-between items-center">
+          <div class="text-gold-300 font-bold">₹2,300 / day</div>
+          <a href="contact.html" class="px-4 py-2 rounded-lg gold-btn font-semibold">Book</a>
+        </div>
+      </article>
+
+      <article class="bg-black/60 p-6 rounded-2xl border border-gold-700 card-shadow fade-in">
+        <img src="https://www.team-bhp.com/sites/default/files/pictures2023/CoorgMay2324.jpg" alt="b2b" class="w-full h-56 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-gold-300">B2B / Fleet Services</h3>
+        <p class="text-gold-200 mt-2">White-label transfers and reliable long-term partnerships for tour operators.</p>
+        <div class="mt-4 flex justify-between items-center">
+          <div class="text-gold-300 font-bold">Custom pricing</div>
+          <a href="contact.html" class="px-4 py-2 rounded-lg gold-btn font-semibold">Contact</a>
+        </div>
+      </article>
+
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+
+  <footer class="bg-black border-t border-gold-700 py-6 text-center text-gold-300">
+    <div class="max-w-6xl mx-auto px-4">© <span id="year2"></span> North Bengal Trips</div>
+  </footer>
+
+<script> document.getElementById('year2').textContent = new Date().getFullYear(); </script>
+</body>
+</html>
