@@ -1,103 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VNest Travels & Adventure — Darjeeling Tours</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body{ background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
-    .card-shadow{ box-shadow:0 10px 25px rgba(0,0,0,0.5); transition: all 0.3s ease; }
-    .card-shadow:hover{ transform: scale(1.05); box-shadow:0 15px 35px rgba(255,215,130,0.4); }
-    .gold-btn{ background:linear-gradient(90deg,#FFD700,#FFC107); color:#0b0b0b; transition: 0.3s; }
-    .gold-btn:hover{ background:linear-gradient(90deg,#FFC107,#FFD700); transform:scale(1.05); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VNest Travels & Adventure</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { background:#0b0b0b; color:rgb(255,215,130); font-family:Inter,system-ui,Arial; }
+  .fade-in { animation:fadeIn 1s ease forwards; opacity:0; }
+  @keyframes fadeIn { to { opacity:1; } }
+  .card-shadow { box-shadow:0 10px 30px rgba(0,0,0,0.6); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .card-shadow:hover { transform:scale(1.05); box-shadow:0 15px 40px rgba(255,215,130,0.4); }
+  .gold-btn { background:linear-gradient(90deg,#FFD700,#FFC107); color:#0b0b0b; transition: 0.3s; }
+  .gold-btn:hover { background:linear-gradient(90deg,#FFC107,#FFD700); transform:scale(1.05); }
+  .hero-bg { background-image:url('https://www.avaniholidays.in/images/city_image/1462178504darjeeling3.webp'); background-size:cover; background-position:center; position:relative; }
+  .hero-bg::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+</style>
 </head>
-<body>
+<body class="antialiased">
 
-  <!-- NAV -->
-  <header class="bg-black sticky top-0 z-50 border-b border-yellow-700">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
-        <div class="font-bold text-yellow-300">VNest Travels & Adventure</div>
-      </a>
-      <nav class="hidden md:flex gap-6">
-        <a href="#home" class="hover:text-yellow-400">Home</a>
-        <a href="#tours" class="hover:text-yellow-400">Tours</a>
-        <a href="#vehicles" class="hover:text-yellow-400">Vehicles</a>
-        <a href="#reviews" class="hover:text-yellow-400">Reviews</a>
-        <a href="#contact" class="gold-btn px-4 py-2 rounded-lg">Contact</a>
-      </nav>
+<!-- NAVIGATION -->
+<header class="bg-black sticky top-0 z-50 border-b border-yellow-700">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">V</div>
+      <div class="text-yellow-300 font-bold">VNest Travels & Adventure</div>
+    </a>
+    <nav class="hidden md:flex gap-6">
+      <a href="index.html" class="hover:text-yellow-400">Home</a>
+      <a href="vehicles.html" class="hover:text-yellow-400">Vehicles</a>
+      <a href="reviews.html" class="hover:text-yellow-400">Reviews</a>
+      <a href="contact.html" class="gold-btn px-4 py-2 rounded-lg">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-bg h-[80vh] flex items-center justify-center text-center text-white relative fade-in">
+  <div class="z-10 px-4">
+    <h1 class="text-5xl md:text-6xl font-extrabold">Explore North Bengal & Himalayas</h1>
+    <p class="mt-4 text-xl md:text-2xl text-yellow-200">Affordable, local-guided adventures in Darjeeling, Sikkim, Himachal & Uttarakhand</p>
+    <div class="mt-6 flex justify-center gap-4">
+      <a href="#tours" class="gold-btn px-6 py-3 rounded-lg font-semibold">See Tours</a>
+      <a href="contact.html" class="px-6 py-3 rounded-lg border border-yellow-400 text-yellow-300 hover:text-yellow-100">Get a Quote</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section id="home" class="relative py-24">
-    <div class="absolute inset-0 bg-black/50 z-0"></div>
-    <img src="https://www.avaniholidays.in/images/city_image/1462178504darjeeling3.webp" alt="Darjeeling Hills and Toy Train" class="w-full h-96 object-cover brightness-75">
-    <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-yellow-300">Explore Darjeeling & North India</h1>
-      <p class="text-lg md:text-xl mb-6 text-yellow-200">Local expertise, affordable tours, and unforgettable adventures with VNest Travels & Adventure.</p>
-      <a href="#tours" class="inline-block px-6 py-3 gold-btn rounded-lg font-semibold">See Tours</a>
+<!-- TOURS -->
+<section id="tours" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <div class="text-center mb-10 fade-in">
+    <h2 class="text-3xl font-bold text-yellow-300">Popular Tours</h2>
+    <p class="mt-2 text-yellow-200">Curated itineraries with local expertise — fully customizable.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <!-- Darjeeling -->
+    <div class="bg-black/60 rounded-2xl p-4 card-shadow fade-in">
+      <img src="https://www.setmytrip.in/wp-content/uploads/2024/12/23238179272_7fa38a5d6b_k.jpeg" class="w-full h-44 object-cover rounded-lg mb-3" alt="Darjeeling Classic">
+      <h3 class="text-yellow-300 font-semibold">Darjeeling Classic — 3 nights</h3>
+      <p class="text-yellow-200 text-sm">Tiger Hill sunrise, Batasia Loop, tea gardens & toy train experience.</p>
+      <p class="mt-2 font-semibold text-yellow-200">Starting From ₹3,999 / person</p>
     </div>
-  </section>
 
-  <!-- TOURS -->
-  <section id="tours" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-    <div class="mb-8 text-center">
-      <h2 class="text-3xl font-bold text-yellow-300">Popular Tours</h2>
-      <p class="mt-2 text-yellow-200">Curated local itineraries — affordable packages and fully customizable trips.</p>
+    <!-- Sikkim -->
+    <div class="bg-black/60 rounded-2xl p-4 card-shadow fade-in">
+      <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2025/07/25100048/North-Sikkim-tourist-places-FI.jpg?tr=w-1200,q-60" class="w-full h-44 object-cover rounded-lg mb-3" alt="Sikkim Escape">
+      <h3 class="text-yellow-300 font-semibold">Sikkim Escape — 5 nights</h3>
+      <p class="text-yellow-200 text-sm">Gangtok, Tsomgo Lake, Nathula Pass, Pelling — adventure & culture.</p>
+      <p class="mt-2 font-semibold text-yellow-200">Starting From ₹5,500 / person</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-      <!-- Darjeeling -->
-      <article class="bg-black/60 rounded-2xl p-4 card-shadow">
-        <img src="https://www.setmytrip.in/wp-content/uploads/2024/12/23238179272_7fa38a5d6b_k.jpeg" alt="Darjeeling tour" class="w-full h-44 object-cover rounded-lg mb-3">
-        <h3 class="mt-2 font-semibold text-yellow-300">Darjeeling Classic — 3 nights</h3>
-        <p class="mt-1 text-yellow-200 text-sm">Tiger Hill sunrise, Batasia Loop, tea gardens, and toy train experience.</p>
-        <div class="mt-3 flex items-center justify-between">
-          <div class="text-sm text-yellow-200">Starting From</div>
-          <div class="font-bold text-yellow-300">₹3,999 / person</div>
-        </div>
-      </article>
-
-      <!-- Sikkim -->
-      <article class="bg-black/60 rounded-2xl p-4 card-shadow">
-        <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2025/07/25100048/North-Sikkim-tourist-places-FI.jpg?tr=w-1200,q-60" alt="Sikkim tour" class="w-full h-44 object-cover rounded-lg mb-3">
-        <h3 class="mt-2 font-semibold text-yellow-300">Sikkim Escape — 5 nights</h3>
-        <p class="mt-1 text-yellow-200 text-sm">Gangtok, Tsomgo Lake, Nathula, Pelling — adventure and culture combined.</p>
-        <div class="mt-3 flex items-center justify-between">
-          <div class="text-sm text-yellow-200">Starting From</div>
-          <div class="font-bold text-yellow-300">₹5,500 / person</div>
-        </div>
-      </article>
-
-      <!-- Himachal -->
-      <article class="bg-black/60 rounded-2xl p-4 card-shadow">
-        <img src="https://static.toiimg.com/photo/msid-93246451,width-96,height-65.cms" alt="Himachal tour" class="w-full h-44 object-cover rounded-lg mb-3">
-        <h3 class="mt-2 font-semibold text-yellow-300">Himachal Highlights — 6 nights</h3>
-        <p class="mt-1 text-yellow-200 text-sm">Shimla, Manali, scenic drives and optional adventure sports.</p>
-        <div class="mt-3 flex items-center justify-between">
-          <div class="text-sm text-yellow-200">Starting From</div>
-          <div class="font-bold text-yellow-300">₹7,500 / person</div>
-        </div>
-      </article>
-
-      <!-- Uttarakhand -->
-      <article class="bg-black/60 rounded-2xl p-4 card-shadow">
-        <img src="https://www.daiwikhotels.com/wp-content/uploads/2024/07/KEDARNATH-2-1-1.jpg" alt="Uttarakhand tour" class="w-full h-44 object-cover rounded-lg mb-3">
-        <h3 class="mt-2 font-semibold text-yellow-300">Uttarakhand Escape — 5 nights</h3>
-        <p class="mt-1 text-yellow-200 text-sm">Rishikesh, Nainital, valley views and riverside adventures.</p>
-        <div class="mt-3 flex items-center justify-between">
-          <div class="text-sm text-yellow-200">Starting From</div>
-          <div class="font-bold text-yellow-300">₹5,999 / person</div>
-        </div>
-      </article>
+    <!-- Himachal -->
+    <div class="bg-black/60 rounded-2xl p-4 card-shadow fade-in">
+      <img src="https://static.toiimg.com/photo/msid-93246451,width-96,height-65.cms" class="w-full h-44 object-cover rounded-lg mb-3" alt="Himachal Highlights">
+      <h3 class="text-yellow-300 font-semibold">Himachal Highlights — 6 nights</h3>
+      <p class="text-yellow-200 text-sm">Shimla, Manali, scenic drives and optional adventure sports.</p>
+      <p class="mt-2 font-semibold text-yellow-200">Starting From ₹7,500 / person</p>
     </div>
-  </section>
 
-  <!-- Add other sections like Vehicles, Reviews, Contact here -->
+    <!-- Uttarakhand -->
+    <div class="bg-black/60 rounded-2xl p-4 card-shadow fade-in">
+      <img src="https://www.daiwikhotels.com/wp-content/uploads/2024/07/KEDARNATH-2-1-1.jpg" class="w-full h-44 object-cover rounded-lg mb-3" alt="Uttarakhand Escape">
+      <h3 class="text-yellow-300 font-semibold">Uttarakhand Escape — 5 nights</h3>
+      <p class="text-yellow-200 text-sm">Rishikesh, Nainital, valley views, riverside adventures — ideal for nature lovers.</p>
+      <p class="mt-2 font-semibold text-yellow-200">Starting From ₹5,999 / person</p>
+    </div>
+  </div>
+</section>
 
+<!-- 3D Floating WhatsApp Button -->
+<a href="https://wa.me/918250193981" target="_blank" class="fixed right-6 bottom-6 z-50 w-16 h-16 rounded-full shadow-2xl bg-green-500 hover:scale-110 transition-transform flex items-center justify-center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8">
+</a>
+
+<footer class="bg-black border-t border-yellow-700 py-6 text-center text-yellow-300">
+  <div class="max-w-6xl mx-auto px-4">© <span id="year-home"></span> VNest Travels & Adventure</div>
+</footer>
+
+<script>
+  document.getElementById('year-home').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
